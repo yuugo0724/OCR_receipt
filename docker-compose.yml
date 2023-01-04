@@ -1,0 +1,55 @@
+version: "3.9"
+services:
+  ocr_receipt:
+    container_name: ocr_receipt
+    image: ocr_receipt
+    build:
+      context: ./dockerfile
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/home/ocr_receipt/src
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+#    restart: always
+  ocr_receipt1:
+    container_name: ocr_receipt1
+    image: ocr_receipt1
+    build:
+      context: ./dockerfile
+      dockerfile: Dockerfile1
+    volumes:
+      - ./src1:/home/ocr_receipt1/src1
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+#    restart: always
+  ocr_receipt2:
+    container_name: ocr_receipt2
+    image: ocr_receipt2
+    build:
+      context: ./dockerfile
+      dockerfile: Dockerfile2
+    volumes:
+      - ./src2:/home/ocr_receipt2/src2
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+#    restart: always
+  ocr_receipt3:
+    container_name: ocr_receipt3
+    image: ocr_receipt3
+    build:
+      context: ./dockerfile
+      dockerfile: Dockerfile3
+    volumes:
+      - ./src3:/home/ocr_receipt3/src3
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+#    restart: always
+volumes:
+  src:
+  src1:
+  src2:
+  src3:
